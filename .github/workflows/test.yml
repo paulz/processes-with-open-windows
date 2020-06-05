@@ -9,5 +9,6 @@ jobs:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
+    - run: ls
     - name: Run a one-line script
-      run: processes-with-open-windows
+      run: ./processes-with-open-windows
