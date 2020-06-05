@@ -1,0 +1,13 @@
+name: Test macOS image
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+jobs:
+  test:
+    runs-on: macos
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run a one-line script
+      run: processes-with-open-windows
