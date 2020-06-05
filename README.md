@@ -1,2 +1,3 @@
 # processes-with-open-windows
-Command Line uti
+macOS Command Line utility to count open windows
+success if screen is clean of windows
