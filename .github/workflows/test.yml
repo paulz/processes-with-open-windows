@@ -9,9 +9,7 @@ jobs:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
-    - run: |
-        list="$(./processes-with-open-windows)"
-        test $? -eq 1 && echo Single Window || echo Multiple windows: $list
+    - run: list="$(./processes-with-open-windows)" || test $? -eq 1 && echo Single Window || echo Multiple windows: $list
     - uses: actions/upload-artifact@v2
       if: failure()
       with:
